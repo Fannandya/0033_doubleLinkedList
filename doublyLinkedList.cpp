@@ -165,5 +165,35 @@ public:
             currentNode = currentNode->next;
             i++;
         }
+
+        // step 2: traverse backward
+        cout << "\nRecords in descending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+
+            // step 3: move to previous node
+            currentNode = currentNode->prev;
+            i--;
+        }
+    }
+
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        node *current = START;
+
+        // step 1: traverse to find matching rull number
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
     }
 };
