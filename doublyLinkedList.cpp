@@ -80,4 +80,18 @@ public:
 
         current->next = newNode; // step 9d: current.next = newNode
     }
+
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nlist is empty" << endl;
+        }
+
+        cout << "\nenter the roll number of the student whose record is to be deleted: ";
+        int rollNo;
+        cin >> rollNo;
+
+        node *current = START;
+    }
 };
