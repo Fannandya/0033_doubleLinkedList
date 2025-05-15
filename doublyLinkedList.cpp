@@ -30,5 +30,8 @@ public:
 
         // step 1: alocate memory for new node
         node *newNode = new node();
+
+        // step 2: assign value to the data fields
+        newNode->noMhs = nim;
     }
 }
