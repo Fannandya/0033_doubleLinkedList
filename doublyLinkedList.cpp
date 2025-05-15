@@ -34,7 +34,7 @@ public:
         // step 2: assign value to the data fields
         newNode->noMhs = nim;
 
-        // step 3: insert at beginning in listis empty or nim is smallest
+        // step 3: insert at beginning in list empty or nim is smallest
         if (START == NULL || nim <= START->noMhs)
         {
             if (START != NULL && nim == START->noMhs)
@@ -42,6 +42,8 @@ public:
                 cout << "\nduplicate number not allowed" << endl;
                 return;
             }
+            // step 4: newNode.next = START
+            newNode->next = START;
         }
     }
 };
