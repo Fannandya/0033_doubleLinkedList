@@ -101,6 +101,24 @@ public:
         if (current == NULL)
         {
             cout << "record not found" << endl;
+            return;
+        }
+
+        // step 2: if node is at the beginning
+        if (current == START)
+        {
+            START = current->next; // step 2a: START = START.next
+            if (START != NULL)
+                START->prev = NULL; // step 2b: START.prev = NULL
+        }
+        else
+        {
+            // step 3: link previous node to next of current
+            current->next->prev = current->next;
+
+            // step 4: if current is not the last node
+            if (current->next != NULL)
+                current->next->prev = current->prev;
         }
     }
 };
