@@ -125,4 +125,15 @@ public:
         delete current;
         cout << "record with roll number " << rollNo << "deleted" << endl;
     }
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nlist is empty" << endl;
+            return;
+        }
+
+        // step 1: mark first node ascurrentNode
+        node *currentNode = START;
+    }
 };
