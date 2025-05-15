@@ -148,4 +148,22 @@ public:
             i++;
         }
     }
+
+    void revtraverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nlist is empty" << endl;
+            return;
+        }
+
+        // step 1: move to last node
+        node *currentNode = START;
+        int i = 0;
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->next;
+            i++;
+        }
+    }
 };
